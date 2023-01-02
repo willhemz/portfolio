@@ -3,7 +3,7 @@ import { data } from '../components/data'
 
 const SKills = () => {
   return <>
-    <section id="skill" className="skill">
+    <section id="skills" className="skill">
       <article className="skill-header">
         <p className='sub-title'>Technologies I work with...</p>
         <h1 className='title'>My Skills</h1>

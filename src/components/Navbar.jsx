@@ -2,9 +2,21 @@ import React, { useState } from 'react'
 import {HiMenuAlt3} from 'react-icons/hi'
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState()
+  const [showLinks, setShowLinks] = useState(false)
   const navLinks = React.useRef(null)
   const navContainer = React.useRef(null)
+ 
+  const handleClick = e => {
+    e.preventDefault()
+    navContainer.current.style.height = `${0}px`
+    setShowLinks(false)
+    const target = e.target.getAttribute('href')
+    const location = document.querySelector(target).offsetTop
+    window.scrollTo({
+      left: 0,
+      top: location - 3,
+    })
+  }
 
   React.useEffect(()=>{
     let height = navLinks.current.getBoundingClientRect().height
@@ -19,11 +31,11 @@ const Navbar = () => {
         </button>
         <div className={`nav-container ${showLinks && 'nav-show'}`} ref={navContainer}>
           <div className={`nav-sections`} ref={navLinks}>
-              <a type='button' href="#home">Home</a>
-              <a href="#about">About Me</a>
-              <a type='button' href="#skills">Skills</a>
-              <a type='button' href="#projects">Projects</a>
-              <a type='button' href="#contact">Contact Me</a>
+              <a type='button' href="#home" onClick={handleClick}>Home</a>
+              <a type='button' href="#about" onClick={handleClick}>About Me</a>
+              <a type='button' href="#skills" onClick={handleClick}>Skills</a>
+              <a type='button' href="#projects" onClick={handleClick}>Projects</a>
+              <a type='button' href="#contact" onClick={handleClick}>Contact Me</a>
           </div>
         </div>
       </section>
