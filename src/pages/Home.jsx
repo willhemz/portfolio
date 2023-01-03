@@ -1,24 +1,9 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React from 'react'
 import williams from '../assets/williams.jpg'
 
 const Home = () => {
-  const [visible, setVisible] = useState(true)
-  const container = useRef()
-
-  // const listenToScroll = () => {
-  //   const size = container.current.getBoundingClientRect()
-  //   const winscroll = document.body.scrollTop || document.documentElement.scrollTop
-  //   if(winscroll > size.height || winscroll < 0) setVisible(true)
-  //   else setVisible(false)
-  // }
-
-  // useEffect(()=>{
-  //   window.addEventListener('scroll', listenToScroll)
-
-  //   return () => window.removeEventListener('scroll', listenToScroll)
-  // },[])
   return <>
-    <section ref={container} id='home' className={`home ${visible && 'viewHome'}`}>
+    <section id='home' className={`home ${'viewHome'}`}>
       <article>
         <p>Hello World! I am</p>
         <p className='my-name'>

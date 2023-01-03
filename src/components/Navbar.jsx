@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {HiMenuAlt3} from 'react-icons/hi'
+import { socials } from './data'
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
@@ -37,6 +38,12 @@ const Navbar = () => {
               <a type='button' href="#projects" onClick={handleClick}>Projects</a>
               <a type='button' href="#contact" onClick={handleClick}>Contact Me</a>
           </div>
+        </div>
+
+        <div className="nav-socials">
+          {socials.map(social => {
+            return <a key={social.id} href={social.url}>{social.icon}</a>
+          })}
         </div>
       </section>
     </nav>

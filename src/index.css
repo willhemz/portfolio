@@ -274,11 +274,72 @@ p {
   padding: 5% 0;
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
 .nav-sections a {
   width: 100%;
   padding: 0 5%;
+}
+
+.nav-socials {
+  display: none;
+}
+
+@media screen and (min-width: 830px) {
+  .nav-container {
+    position: static;
+    height: 4rem !important;
+  }
+  .nav-center {
+    align-items: center;
+  }
+  .nav-show {
+    box-shadow: none;
+  }
+  .nav-sections {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .nav-logo {
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-sections a {
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s linear;
+  }
+
+  .nav-sections a:hover {
+    color: var(--success-300);
+  }
+  .btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-logo {
+    flex-basis: 0;
+  }
+  .nav-center {
+    gap: 14%;
+  }
+  .nav-socials {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+  }
+  .nav-socials a:hover {
+    transition: all 0.3s ease-in-out;
+    color: var(--success-200);
+  }
 }
 
 /* Main */
@@ -366,6 +427,8 @@ p {
 
   .home .home-profile {
     display: block;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   .home .home-profile img {
@@ -472,6 +535,12 @@ p {
   }
 }
 
+@media screen and (min-width: 1124px) {
+  .skill-footer {
+    grid-template-columns: repeat(6, 1fr)
+  }
+}
+
 /* Projects */
 .project {
   width: 100%;
@@ -512,7 +581,7 @@ p {
 }
 
 .project-footer {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: grid;
   gap: 4rem;
 }
@@ -600,6 +669,12 @@ p {
   }
 }
 
+@media screen and (min-width: 830px) {
+  .btn.skill-btn {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .project-footer {
     display: grid;
@@ -631,6 +706,7 @@ p {
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 5%;
+  padding-top: 0;
 }
 
 .contact-item {
@@ -751,17 +827,32 @@ label.error {
   width: max-content;
 }
 
-/* @media screen and (min-width: 425px) {
-  .contact-header .sub-title {
-    top: 5.5rem;
+@media screen and (min-width: 768px) {
+  .contact {
+    position: relative;
+  }
+
+  .contact-header {
+    position: absolute;
+    left: 0%;
+    top: -5%;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-details {
+    flex-basis: 40%;
+  }
+
+  .contact-footer {
+    flex-basis: 60%;
   }
 }
-
-@media screen and (min-width: 600px) {
-  .contact-header .sub-title {
-    top: 6.5rem;
-  }
-} */
 
 /* Footer */
 footer.footer {
