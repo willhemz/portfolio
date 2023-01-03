@@ -30,12 +30,12 @@ import countdown from '../assets/web/countdown.jpg'
 export const socials = [
   {
     id: 1,
-    url: 'https://twitter.com/willhemzDev?t=8lt4cARSXgkHPjbVimA-mQ&s=09',
+    url: 'https://twitter.com/king_hayjhay?t=NQhyW25e51IwiPa1lOcC1g&s=09',
     icon: <FaTwitter />,
   },
   {
     id: 2,
-    url: 'https://linkedin.com/williamsbalogun',
+    url: 'https://linkedin.com/in/williamsbalogun',
     icon: <FaLinkedinIn />,
   },
   { id: 3, url: 'https://github.com/willhemz', icon: <AiOutlineGithub /> },
