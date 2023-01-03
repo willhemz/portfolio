@@ -593,6 +593,18 @@ p {
     height: 100%;
     object-position: center;
   }
+
+  .project-item .github .logo, .project-item .web .logo {
+    top: 6%;
+    color: var(--success-900)
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Contact */
@@ -609,7 +621,7 @@ p {
 
 .contact-header .sub-title {
   position: absolute;
-  top: 4.5rem;
+  top: 60%;
   font-size: 1.6rem;
 }
 
@@ -738,6 +750,18 @@ label.error {
   transform: translateX(-50%); 
   width: max-content;
 }
+
+/* @media screen and (min-width: 425px) {
+  .contact-header .sub-title {
+    top: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contact-header .sub-title {
+    top: 6.5rem;
+  }
+} */
 
 /* Footer */
 footer.footer {
