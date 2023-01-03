@@ -1,5 +1,5 @@
 import React from 'react'
-import { Loading, Navbar } from './components'
+import { Footer, Loading, Navbar } from './components'
 import { About, Contact, Home, Projects, Skills } from './pages'
 import { useGenContext } from './context'
 
@@ -18,6 +18,7 @@ const App = () => {
         <Skills />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </div>
   )

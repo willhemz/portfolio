@@ -6,6 +6,9 @@ import {
   FaSass,
   FaFigma,
   FaPhoneAlt,
+  FaTwitter,
+  FaLinkedinIn,
+  FaFacebookF,
 } from 'react-icons/fa'
 import {
   SiRedux,
@@ -22,6 +25,14 @@ import { BiLinkExternal } from 'react-icons/bi'
 import { ImSpinner9 } from 'react-icons/im'
 
 import cocktail from '../assets/web/cocktail.jpg'
+import countdown from '../assets/web/countdown.jpg'
+
+export const socials = [
+  { id: 1, url: '', icon: <FaTwitter /> },
+  { id: 2, url: '', icon: <FaLinkedinIn /> },
+  { id: 3, url: '', icon: <AiOutlineGithub /> },
+  { id: 4, url: '', icon: <FaFacebookF /> },
+]
 
 export const obj = {
   phone: <FaPhoneAlt />,
@@ -60,6 +71,18 @@ export const projects = [
     link: 'https://ihemz-cocktail.netlify.app',
     github: 'https://github.com/willhemz/cocktail',
     technologies: ['react', 'redux', 'cocktail api', 'css3', 'react-router'],
+    type: 'web',
+  },
+  {
+    id: 2,
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: countdown,
+    title: 'countdown',
+    desc: 'Event countdown timer creator',
+    link: 'https://ihemz-countdown.netlify.app',
+    github: 'https://github.com/willhemz/countdown-timer.web',
+    technologies: ['react', 'endpoints', 'tailwind', 'react-router'],
     type: 'web',
   },
 ]

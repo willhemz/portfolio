@@ -295,6 +295,23 @@ p {
   font-size: 1.8rem;
   color: var(--success-700);
   margin-bottom: 5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  /* display: flex; */
+}
+
+.viewHome {
+  visibility: visible;
+  opacity: 1;
+}
+
+.home article {
+  width: 100%;
+}
+
+.home .home-profile {
+  display: none;
 }
 
 .home p {
@@ -332,6 +349,28 @@ p {
   background: var(--success-900);
   color: var(--success-50);
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .home article {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .home .home-profile {
+    display: block;
+  }
+
+  .home .home-profile img {
+    width: 80%;
+  }
 }
 
 /* About section */
@@ -372,6 +411,23 @@ p {
   color: var(--success-900)
 }
 
+@media screen and (min-width: 768px) {
+  .about {
+    display: flex;
+  }
+
+  .about article {
+    flex-basis: 50%;
+  }
+
+  .about-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* Skills */
 .skill {
   width: 100%;
@@ -408,6 +464,12 @@ p {
 
 .skill-footer .stack p:first-child {
   font-size: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .skill-footer {
+    grid-template-columns: repeat(4, 1fr)
+  }
 }
 
 /* Projects */
@@ -450,7 +512,9 @@ p {
 }
 
 .project-footer {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  display: grid;
+  gap: 4rem;
 }
 
 .project-item {
@@ -508,6 +572,27 @@ p {
   position: absolute;
   top: 20%;
   right: 4%;
+}
+
+@media screen and (min-width: 768px) {
+  .project-item {
+    display: flex;
+  }
+
+  .project-item .web {
+    order: 2;
+  }
+
+  .project-item .github {
+    order: 1;
+    flex-basis: 40%;
+    height: 100%;
+  }
+
+  .project-item .github img {
+    height: 100%;
+    object-position: center;
+  }
 }
 
 /* Contact */
@@ -652,4 +737,22 @@ label.error {
   margin-left: 50%;
   transform: translateX(-50%); 
   width: max-content;
+}
+
+/* Footer */
+footer.footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page-header {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.page-header a {
+  font-size: 2.5rem;
+  color: var(--success-900);
 }
