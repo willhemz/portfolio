@@ -26,6 +26,11 @@ import { ImSpinner9 } from 'react-icons/im'
 
 import cocktail from '../assets/web/cocktail.jpg'
 import countdown from '../assets/web/countdown.jpg'
+import project1 from '../assets/web/project1.png'
+import project2 from '../assets/web/project2.png'
+import project3 from '../assets/web/project3.png'
+import project4 from '../assets/web/project4.png'
+import project5 from '../assets/web/project5.png'
 
 export const socials = [
   {
@@ -91,6 +96,73 @@ export const projects = [
     link: 'https://ihemz-countdown.netlify.app',
     github: 'https://github.com/willhemz/countdown-timer.web',
     technologies: ['react', 'endpoints', 'tailwind', 'react-router'],
+    type: 'web',
+  },
+  {
+    id: 3,
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: project1,
+    title: 'coverly',
+    desc: 'A cover letter generator app',
+    link: 'https://coverly.app',
+    github: 'https://github.com/workshopapps/coverletter.web',
+    technologies: [
+      'react',
+      'javascript',
+      'tailwind',
+      'react-router',
+      'redux',
+      'GoogleAuth',
+    ],
+    type: 'web',
+  },
+  {
+    id: 4,
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: project2,
+    title: 'streetrates',
+    desc: "An info app for currencies' exchange rates",
+    link: 'https://streetrates.info',
+    github: 'https://github.com/workshopapps/realxchangerate.web',
+    technologies: ['react', 'firebase', 'sass', 'react-router', 'redux', 'api'],
+    type: 'web',
+  },
+  {
+    id: 5,
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: project3,
+    title: 'metabnb',
+    desc: 'A clone of MetaBnB landing page',
+    link: 'https://ihemz-metabnb.netlify.app',
+    github: 'https://github.com/willhemz/metabnb',
+    technologies: ['react', 'tailwind', 'react-router'],
+    type: 'web',
+  },
+  {
+    id: 6,
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: project4,
+    title: 'stripe',
+    desc: 'A clone of Stripe landing page',
+    link: 'https://ihemz-stripe.netlify.app',
+    github: 'https://github.com/willhemz/stripe',
+    technologies: ['react', 'context api', 'css3', 'redux'],
+    type: 'web',
+  },
+  {
+    id: 7,
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: project5,
+    title: 'grocery-bud',
+    desc: 'A grocery list generator app',
+    link: 'https://ihemz-grocery.netlify.app',
+    github: 'https://github.com/willhemz/Grocery-Bud',
+    technologies: ['react', 'css3'],
     type: 'web',
   },
 ]
