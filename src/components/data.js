@@ -28,10 +28,18 @@ import cocktail from '../assets/web/cocktail.jpg'
 import countdown from '../assets/web/countdown.jpg'
 
 export const socials = [
-  { id: 1, url: '', icon: <FaTwitter /> },
-  { id: 2, url: '', icon: <FaLinkedinIn /> },
-  { id: 3, url: '', icon: <AiOutlineGithub /> },
-  { id: 4, url: '', icon: <FaFacebookF /> },
+  {
+    id: 1,
+    url: 'https://twitter.com/willhemzDev?t=8lt4cARSXgkHPjbVimA-mQ&s=09',
+    icon: <FaTwitter />,
+  },
+  {
+    id: 2,
+    url: 'https://linkedin.com/williamsbalogun',
+    icon: <FaLinkedinIn />,
+  },
+  { id: 3, url: 'https://github.com/willhemz', icon: <AiOutlineGithub /> },
+  { id: 4, url: 'https://facebook.com/aj.willie.583', icon: <FaFacebookF /> },
 ]
 
 export const obj = {
