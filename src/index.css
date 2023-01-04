@@ -348,18 +348,19 @@ p {
 .main {
   position: absolute;
   top: 10rem;
+  overflow: hidden;
 }
 
 /* Home */
 .home {
-  padding: 5%;
+  padding: 10% 5%;
   text-align: center;
   width: 100%;
   font-size: 1.8rem;
   color: var(--success-700);
   margin-bottom: 5rem;
   transition: all 0.3s ease-in-out;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .home article {
@@ -436,6 +437,7 @@ p {
   width: 100%;
   margin-bottom: 5rem;
   overflow: hidden;
+  height: max-content;
 }
 
 .about-header {
@@ -491,7 +493,9 @@ p {
 .skill {
   width: 100%;
   padding: 5%;
+  /* padding-top: 15% !important; */
   margin-bottom: 5rem;
+  height: max-content;
 }
 
 .skill-header {
@@ -540,6 +544,7 @@ p {
 /* Projects */
 .project {
   width: 100%;
+  height: max-content;
   padding: 5%;
   margin-bottom: 5rem;
 }

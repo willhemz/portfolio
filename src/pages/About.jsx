@@ -26,7 +26,7 @@ const About = () => {
       gsap.to(element, 2, {
           opacity: 0,
           x: '-100px',
-          y: '-100px',
+          // y: '-100px',
           ease: 'power4',
       })
   }
@@ -55,7 +55,7 @@ const About = () => {
       gsap.to(element, 2, {
           opacity: 0,
           x: '100px',
-          y: '100px',
+          // y: '100px',
           ease: 'power4',
       })
   }

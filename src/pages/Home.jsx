@@ -73,12 +73,14 @@ const Home = () => {
           My goal is to leverage my skills and experience to help individuals,
           firms and businesses scale up and achieve their goals.
         </p>
-        <a type='button' href='#contact' style={{marginRight: '1rem'}}>
-          Hire Me
-        </a>
-        <a type='button' href={resume} target='_blank' rel='noreferrer'>
-          Resume
-        </a>
+        <div>
+          <a type='button' href='#contact' style={{marginRight: '1rem'}}>
+            Hire Me
+          </a>
+          <a type='button' href={resume} target='_blank' rel='noreferrer'>
+            Resume
+          </a>
+        </div>
       </article>
       <article ref={rightContainer} className='home-profile'>
         <img src={williams} alt="" />

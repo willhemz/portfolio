@@ -4,12 +4,12 @@ import {useIntersection} from 'react-use';
 import { data } from '../components/data'
 
 const SKills = () => {
-  const bottomContainer = useRef()
+  const bottomContainer = useRef(null)
 
   // Animation
   const bottomAnim = useIntersection(bottomContainer, {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "100px",
     threshold: .5
   })
 
@@ -27,7 +27,7 @@ const SKills = () => {
   const slideOutBottom = (element) => {
       gsap.to(element, 2, {
           opacity: 0,
-          y: '150px',
+          y: '100px',
           ease: 'power4',
       })
   }
