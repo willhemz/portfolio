@@ -353,7 +353,7 @@ p {
 
 /* Home */
 .home {
-  padding: 10% 5%;
+  padding: 20% 5%;
   text-align: center;
   width: 100%;
   font-size: 1.8rem;
@@ -413,6 +413,7 @@ p {
     display: flex;
     align-items: center;
     gap: 3rem;
+    padding: 10% 5%;
   }
 
   .home article {
@@ -429,6 +430,12 @@ p {
 
   .home .home-profile img {
     width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    padding: 5%;
   }
 }
 
