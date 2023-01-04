@@ -7,7 +7,7 @@ const Footer = () => {
       <article className="page-header">
         {
           socials.map(social => {
-            return <a type='button' key={social.id} href={social.url}>{social.icon}</a>
+            return <a type='button' key={social.id} href={social.url} target='_blank' rel='noreferrer'>{social.icon}</a>
           })
         }
       </article>

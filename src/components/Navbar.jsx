@@ -42,7 +42,7 @@ const Navbar = () => {
 
         <div className="nav-socials">
           {socials.map(social => {
-            return <a key={social.id} href={social.url}>{social.icon}</a>
+            return <a key={social.id} href={social.url} target='_blank' rel='noreferrer'>{social.icon}</a>
           })}
         </div>
       </section>
