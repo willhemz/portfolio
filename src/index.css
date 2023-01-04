@@ -581,11 +581,17 @@ p {
   color: var(--success-100);
   text-transform: capitalize;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .project-buttons .skill-btn:last-child {
   background: var(--success-100);
   color: var(--success-900);
+}
+
+.project-buttons .skill-btn:last-child:hover, .project-buttons .skill-btn:first-child:hover {
+  color: var(--success-100);
+  background: var(--success-700);
 }
 
 .project-footer {
@@ -597,6 +603,11 @@ p {
 .project-item {
   background: transparent;
   box-shadow: var(--lightShadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-item:hover {
+  scale: 1.05;
 }
 
 .project-item .web {
