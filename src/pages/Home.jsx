@@ -1,9 +1,10 @@
 import React from 'react'
 import williams from '../assets/williams.jpg'
+import resume from '../assets/resume.pdf'
 
 const Home = () => {
   return <>
-    <section id='home' className={`home ${'viewHome'}`}>
+    <section id='home' className='home'>
       <article>
         <p>Hello World! I am</p>
         <p className='my-name'>
@@ -15,8 +16,11 @@ const Home = () => {
           My goal is to leverage my skills and experience to help individuals,
           firms and businesses scale up and achieve their goals.
         </p>
-        <a type='button' href='#contact'>
+        <a type='button' href='#contact' style={{marginRight: '1rem'}}>
           Hire Me
+        </a>
+        <a type='button' href={resume} target='_blank' rel='noreferrer'>
+          Resume
         </a>
       </article>
       <article className='home-profile'>

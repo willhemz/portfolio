@@ -356,15 +356,8 @@ p {
   font-size: 1.8rem;
   color: var(--success-700);
   margin-bottom: 5rem;
-  visibility: hidden;
-  opacity: 0;
   transition: all 0.3s ease-in-out;
   /* display: flex; */
-}
-
-.viewHome {
-  visibility: visible;
-  opacity: 1;
 }
 
 .home article {
