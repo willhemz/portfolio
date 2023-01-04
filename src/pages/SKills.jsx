@@ -1,9 +1,41 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import gsap from 'gsap';
+import {useIntersection} from 'react-use';
 import { data } from '../components/data'
 
 const SKills = () => {
+  const bottomContainer = useRef()
+
+  // Animation
+  const bottomAnim = useIntersection(bottomContainer, {
+    root: null,
+    rootMargin: "0px",
+    threshold: .5
+  })
+
+  const slideInBottom = (element) => {
+      gsap.to(element, 2, {
+          opacity: 1,
+          y: '0px',
+          ease: 'power4',
+          stagger: {
+              amount: 3
+          }
+      })
+  }
+
+  const slideOutBottom = (element) => {
+      gsap.to(element, 2, {
+          opacity: 0,
+          y: '150px',
+          ease: 'power4',
+      })
+  }
+  
+  bottomAnim && bottomAnim.intersectionRatio > .5 ? slideInBottom('.skill'): slideOutBottom('.skill')
+
   return <>
-    <section id="skills" className="skill">
+    <section ref={bottomContainer} id="skills" className="skill">
       <article className="skill-header">
         <p className='sub-title'>Technologies I work with...</p>
         <h1 className='title'>My Skills</h1>

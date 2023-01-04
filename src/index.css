@@ -8,8 +8,10 @@
 === VARIABLES ===
 */
 :root {
+  /* Nav background */
+  --nav-bg: rgb(249, 252, 251);
   /* Green shades */
-  --success-bg: hsl(120, 100%, 100%);
+  --success-bg: #ffffff;
   --success-50: #e6ffe6;
   --success-100: #ccffcc;
   --success-200: #99ff99;
@@ -236,7 +238,7 @@ p {
   display: grid;
   place-content: center;
   place-items: center;
-  background: var(--success-bg);
+  background: var(--nav-bg);
   box-shadow: var(--dark-shadow);
   z-index: 2;
 }
@@ -262,7 +264,7 @@ p {
   width: 100%;
   font-size: 2rem;
   transition: all 0.3s linear;
-  background: var(--success-bg);
+  background: var(--nav-bg);
   overflow: hidden;
 }
 
@@ -357,7 +359,7 @@ p {
   color: var(--success-700);
   margin-bottom: 5rem;
   transition: all 0.3s ease-in-out;
-  /* display: flex; */
+  overflow: hidden;
 }
 
 .home article {
@@ -433,6 +435,7 @@ p {
 .about {
   width: 100%;
   margin-bottom: 5rem;
+  overflow: hidden;
 }
 
 .about-header {
@@ -679,6 +682,7 @@ p {
 .contact {
   width: 100%;
   margin-bottom: 5rem;
+  overflow: hidden;
 }
 
 .contact-header {

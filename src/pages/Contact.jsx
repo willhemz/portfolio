@@ -1,8 +1,65 @@
 import React, {useState, useRef} from 'react'
+import gsap from 'gsap';
+import {useIntersection} from 'react-use';
 import { sendEmail } from '../components/email'
 import { obj } from '../components/data'
 
 const Contact = () => {
+  const leftContainer = useRef(null)
+  const rightContainer = useRef(null)
+  // left Animation
+  const leftAnim = useIntersection(leftContainer, {
+      root: null,
+      rootMargin: "0px",
+      threshold: .5
+  })
+  const slideInLeft = (element) => {
+      gsap.to(element, 2, {
+          opacity: 1,
+          x: '0px',
+          ease: 'power4',
+          stagger: {
+              amount: 3
+          }
+      })
+  }
+  const slideOutLeft = (element) => {
+      gsap.to(element, 2, {
+          opacity: 0,
+          x: '-100px',
+          ease: 'power4',
+      })
+  }
+  leftAnim && leftAnim.intersectionRatio > .5 ? slideInLeft('.contact-details'): slideOutLeft('.contact-details')
+
+  // right
+  const rightAnim = useIntersection(rightContainer, {
+    root: null,
+    rootMargin: "0px",
+    threshold: .5
+  })
+
+  const slideInRight = (element) => {
+      gsap.to(element, 2, {
+          opacity: 1,
+          x: '0px',
+          ease: 'power4',
+          stagger: {
+              amount: 3
+          }
+      })
+  }
+
+  const slideOutRight = (element) => {
+      gsap.to(element, 2, {
+          opacity: 0,
+          x: '100px',
+          ease: 'power4',
+      })
+  }
+  
+  rightAnim && rightAnim.intersectionRatio > .5 ? slideInRight('.contact-footer'): slideOutRight('.contact-footer')
+  
   const [info, setInfo] = useState({name:'', email:'', message:''})
   const [rules, setRules] = useState(false)
   const form = useRef()
@@ -37,7 +94,7 @@ const Contact = () => {
         </article>
 
         <div className="divider">
-          <article className='contact-details'>
+          <article ref={leftContainer} className='contact-details'>
             <div className='contact-item'>
               <p>
                 {obj.phone}
@@ -67,7 +124,7 @@ const Contact = () => {
             </div>
           </article>
 
-          <article className='contact-footer'>
+          <article ref={rightContainer} className='contact-footer'>
             {
               loading && <p className='success'>Message Sent Successfully...</p>
             }

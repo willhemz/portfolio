@@ -1,10 +1,41 @@
 import React from 'react'
+import gsap from 'gsap';
+import {useIntersection} from 'react-use';
 import { projects } from '../components/data'
 
 const Projects = () => {
+  const topContainer = React.useRef()
   const [list, setList] = React.useState(projects.filter(project => project.type === 'web'))
+
+  // Animation
+  const topAnim = useIntersection(topContainer, {
+    root: null,
+    rootMargin: "100px",
+    threshold: .5
+  })
+
+  const slideInBottom = (element) => {
+      gsap.to(element, 2, {
+          opacity: 1,
+          y: '0px',
+          ease: 'power4',
+          stagger: {
+              amount: 3
+          }
+      })
+  }
+
+  const slideOutBottom = (element) => {
+      gsap.to(element, 2, {
+          opacity: 0,
+          y: '100px',
+          ease: 'power4',
+      })
+  }
+  
+  topAnim && topAnim.intersectionRatio > .5 ? slideInBottom('.project'): slideOutBottom('.project')
   return <>
-    <section className="project" id="projects">
+    <section ref={topContainer} className="project" id="projects">
       <article className="project-header">
         <p className="sub-title">Quality build, Quality development</p>
         <h1>My Projects</h1>
