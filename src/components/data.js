@@ -31,6 +31,7 @@ import project2 from '../assets/web/project2.png'
 import project3 from '../assets/web/project3.png'
 import project4 from '../assets/web/project4.png'
 import project5 from '../assets/web/project5.png'
+import dolapot from '../assets/web/dolapot.png'
 
 export const socials = [
   {
@@ -74,6 +75,18 @@ export const data = [
 ]
 
 export const projects = [
+  {
+    id: new Date().getTime().toString(),
+    icon: <AiOutlineGithub />,
+    web: <BiLinkExternal />,
+    image: dolapot,
+    title: 'dolapot',
+    desc: 'A food and cocktail shopping app',
+    link: 'https://ihemz-dolapot.netlify.app',
+    github: 'https://github.com/willhemz/restaurant',
+    technologies: ['react', 'redux', 'meal api', 'tailwind', 'react-router'],
+    type: 'web',
+  },
   {
     id: 1,
     icon: <AiOutlineGithub />,
